@@ -4,6 +4,7 @@ year,Jahr,Year
 bln,Mrd,Bln
 intro,"Wähle rechts Elemente aus, um auf die Gesamtsumme von %value% Mrd. € zu kommen.",Here comes a small intro-text for explanation
 end-title,Das ist zu viel!,This is too much!
-end-message,Du hast jetzt mehr als,You have now more than
+end-message-sum,Du hast schon,You already have
+end-message-item,Zusammen mit %item% (%value% Mrd. €) sind das mehr als,Together with %item% (%value% Bln. €) this is more than
 end-message-reset,Neu starten,Reset from scratch
 end-message-reselect,Etwas anderes auswählen,Select something different
