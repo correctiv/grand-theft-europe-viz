@@ -1,0 +1,59 @@
+@import '../vars.scss';
+@import '../mixins.scss';
+
+.gteviz-dataselector {
+  display: block;
+  width: 60%;
+  position: absolute;
+  bottom: 25px;
+  left: 40%;
+
+  @include bp-sm {
+    width: 50%;
+    left: 50%;
+  }
+}
+
+.gteviz-dataitem {
+  margin: 0 3px 3px 0;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  // border-bottom: solid 3px $white;
+  // border: 1px solid $red;
+  border: 1px solid $grey-dark;
+  border-radius: 10px;
+  padding: 5px 7px;
+  font-size: 12px;
+  line-height: 1;
+  // color: $red;
+  color: $grey-dark;
+  @include transition(background-color);
+
+  &:hover {
+    @include transition(background-color);
+    background-color: lighten($red, 30%);
+  }
+
+  &--active {
+    color: white;
+    background-color: $red;
+    border-color: $red;
+
+    &:hover {
+      color: white;
+      background-color: $red;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    // top: 50%;
+    right: 10px;
+
+    &:after {
+      content: '\2716';
+    }
+  }
+}

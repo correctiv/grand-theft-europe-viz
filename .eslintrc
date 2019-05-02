@@ -8,6 +8,6 @@
     "sourceType": "module"
   },
   "rules": {
-    "semi": 2
+    "semi": 0
   }
 }

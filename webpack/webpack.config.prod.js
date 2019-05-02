@@ -1,8 +1,8 @@
-const Path = require('path');
-const Webpack = require('webpack');
-const merge = require('webpack-merge');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const common = require('./webpack.common.js');
+const Path = require('path')
+const Webpack = require('webpack')
+const merge = require('webpack-merge')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
   mode: 'production',
@@ -10,8 +10,8 @@ module.exports = merge(common, {
   stats: 'errors-only',
   bail: true,
   output: {
-    filename: 'js/[name].[chunkhash:8].js',
-    chunkFilename: 'js/[name].[chunkhash:8].chunk.js'
+    filename: 'gte-viz.js'
+    // chunkFilename: 'js/[name].[chunkhash:8].chunk.js'
   },
   plugins: [
     new Webpack.DefinePlugin({
@@ -19,24 +19,26 @@ module.exports = merge(common, {
     }),
     new Webpack.optimize.ModuleConcatenationPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'bundle.css'
+      filename: 'gte-viz.css'
     })
   ],
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(tag)$/,
+        enforce: 'pre',
+        exclude: /node_modules/,
+        use: 'riotjs-loader'
+      },
+      {
+        test: /\.(js|tag)$/,
         exclude: /node_modules/,
         use: 'babel-loader'
       },
       {
         test: /\.s?css/i,
-        use : [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   }
-});
+})

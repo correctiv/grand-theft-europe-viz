@@ -1,0 +1,47 @@
+@import './vars.scss';
+
+@mixin bp-xs() {
+  @media (min-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin bp-sm() {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin bp-md() {
+  @media (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin bp-lg() {
+  @media (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin hide-bigger() {
+  @include bp-sm {
+    display: none;
+  }
+}
+
+@mixin hide-small($display: block) {
+  display: none;
+
+  @include bp-sm() {
+    display: $display;
+  }
+}
+
+
+@mixin transition($transition) {
+  -moz-transition:    $transition $transition-duration;
+  -o-transition:      $transition $transition-duration;
+  -webkit-transition: $transition $transition-duration;
+  // transition: $transition $transition-duration;
+}

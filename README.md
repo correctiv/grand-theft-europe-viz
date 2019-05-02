@@ -1,6 +1,42 @@
-# Webpack Frontend Starterkit
+# grand-theft-europe-viz
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/wbkd/webpack-starter.svg)](https://greenkeeper.io/)
+A small data-game to get a feeling for 50 billion euro, used for the [Grand
+Theft Europe](http://grand-theft-europe.com)-Investigation by
+[CORRECTIV](https://correctiv.org) and 35 european media partners.
+
+Build with [d3js](https://d3js.org) and [riot.js](https://riot.js.org)
+
+[preview](https://correctiv.github.io/grand-theft-europe-viz/)
+
+## usage
+
+How to include in article: Load css & js and insert a `<div>`-element as
+described below:
+
+
+### European Data, 50 Bln., language: English
+
+```html
+<div class="gteviz-wrapper" data-mount="gteviz" data-lang="en" data-scope="eu"></div>
+```
+
+### European Data, 50 Bln., language: German
+
+```html
+<div class="gteviz-wrapper" data-mount="gteviz" data-lang="de" data-scope="eu"></div>
+```
+
+### German Data, 14 Bln., language: German
+
+```html
+<div class="gteviz-wrapper" data-mount="gteviz" data-lang="de" data-scope="de"></div>
+```
+
+
+
+based on this starterkit by [webkid](http://github.com/wbkd/):
+
+# Webpack Frontend Starterkit
 
 A lightweight foundation for your next webpack based frontend project.
 

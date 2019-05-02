@@ -1,0 +1,67 @@
+@import '../../vars.scss';
+@import '../../mixins.scss';
+
+.gteviz-svgviz {
+  position: relative;
+  display: block;
+  width: 40%;
+  float: left;
+
+  @include bp-sm {
+    with: 50%;
+  }
+
+  &__wrapper {
+    svg {
+      path.domain {
+        display: none;
+      }
+
+      .tick {
+        text {
+          color: $grey-dark;
+        }
+        line {
+          stroke: $grey-dark;
+        }
+      }
+
+      rect {
+        // fill: #ff5064;
+        fill-opacity: 1;
+        stroke: white;
+        stroke-width: 2;
+        @include transition(fill-opacity);
+
+        &:hover {
+          fill-opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    color: $red;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__intro {
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    right: 10px;
+    // color: $grey-dark;
+    color: $red;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+
+    @include bp-sm {
+      left: 40px;
+      right: 40px;
+    }
+  }
+}

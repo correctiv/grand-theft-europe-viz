@@ -1,0 +1,34 @@
+@import './vars.scss';
+
+// components
+@import './components/footer.scss';
+@import './components/svg-viz/svg-viz.scss';
+@import './components/data-selector.scss';
+@import './components/data-infobox.scss';
+@import './components/target-message.scss';
+
+// base
+.gteviz-wrapper {
+  font-family: $font-sans;
+  display: block;
+  width: 100%;
+  position: relative;
+  // margin-bottom: 50px;
+
+  .gteviz-inner {
+    display: block;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+      // padding-bottom: 30px;
+    }
+  }
+
+  .gteviz-anchor {
+    display: block;
+    height: 0;
+  }
+}

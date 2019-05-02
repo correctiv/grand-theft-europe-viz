@@ -1,7 +1,7 @@
-const Path = require('path');
-const Webpack = require('webpack');
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const Path = require('path')
+const Webpack = require('webpack')
+const merge = require('webpack-merge')
+const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
   mode: 'development',
@@ -10,26 +10,34 @@ module.exports = merge(common, {
     chunkFilename: 'js/[name].chunk.js'
   },
   devServer: {
-    inline: true
+    inline: true,
+    hot: true
   },
   plugins: [
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
-    })
+    }),
+    new Webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
+      {
+        test: /\.(tag)$/,
+        enforce: 'pre',
+        exclude: /node_modules/,
+        use: 'riotjs-loader'
+      },
       {
         test: /\.(js)$/,
         include: Path.resolve(__dirname, '../src'),
         enforce: 'pre',
         loader: 'eslint-loader',
         options: {
-          emitWarning: true,
+          emitWarning: true
         }
       },
       {
-        test: /\.(js)$/,
+        test: /\.(js|tag)$/,
         include: Path.resolve(__dirname, '../src'),
         loader: 'babel-loader'
       },
@@ -39,4 +47,4 @@ module.exports = merge(common, {
       }
     ]
   }
-});
+})
