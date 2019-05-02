@@ -34,7 +34,8 @@ import { data } from '~/data/data.js'
   this.blocked = false
 
   this.on('mount', () => {
-    const initialItem = this.items[Math.floor(Math.random() * this.items.length)]
+    const lowItems = this.items.filter(({value}) => value < this.STORE.maxValue[this.SCOPE] / 2)
+    const initialItem = lowItems[Math.floor(Math.random() * lowItems.length)]
     this.CONTROL.trigger(this.EVENTS.addItem, initialItem, true)
   })
 
