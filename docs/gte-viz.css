@@ -38,8 +38,12 @@
   .gteviz-svgviz__intro {
     position: absolute;
     top: 50px;
-    left: 25px;
     right: 10px;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.11);
     color: #ff5064;
     font-size: 12px;
     line-height: 1.4;
@@ -48,6 +52,8 @@
       .gteviz-svgviz__intro {
         left: 40px;
         right: 40px; } }
+    .gteviz-svgviz__intro .fa {
+      display: block; }
 
 .gteviz-dataselector {
   display: block;
@@ -115,8 +121,11 @@
     padding: 20px 0 20px 0; }
     @media (min-width: 768px) {
       .gteviz-infobox--visible {
-        top: 10px;
-        width: 40%; } }
+        top: auto;
+        left: 110px;
+        right: 50%;
+        bottom: 30px;
+        margin-right: 10px; } }
   .gteviz-infobox__close {
     cursor: pointer;
     display: block;
@@ -126,6 +135,9 @@
     color: #1e4664; }
     .gteviz-infobox__close:before {
       content: '\2716'; }
+    @media (min-width: 768px) {
+      .gteviz-infobox__close {
+        display: none; } }
   .gteviz-infobox__value {
     font-size: 30px !important;
     padding: 10px;

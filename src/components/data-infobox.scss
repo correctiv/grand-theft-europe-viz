@@ -28,8 +28,11 @@
     padding: 20px 0 20px 0;
 
     @include bp-sm {
-      top: 10px;
-      width: 40%;
+      top: auto;
+      left: 110px;
+      right: 50%;
+      bottom: 30px;
+      margin-right: 10px;
     }
   }
 
@@ -46,9 +49,9 @@
       content: '\2716';
     }
 
-    // @include bp-sm {
-    //   display: none;
-    // }
+    @include bp-sm {
+      display: none;
+    }
   }
 
   &__value {

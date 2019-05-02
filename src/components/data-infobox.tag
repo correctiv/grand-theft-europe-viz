@@ -27,12 +27,17 @@
   })
 
   this.CONTROL.on(this.EVENTS.reset, () => {
+    this.close()
     this.update({ blocked: false })
   })
 
   this.CONTROL.on(this.EVENTS.unselectItem, () => {
+    this.close()
     this.update({ blocked: false })
   })
-  //
+
+  this.CONTROL.on(this.EVENTS.addItem, () => this.close())
+  this.CONTROL.on(this.EVENTS.deleteItem, () => this.close())
+
   // this.CONTROL.on(this.EVENTS.hoverOut, () => this.update({ visible: false }))
 </data-infobox>

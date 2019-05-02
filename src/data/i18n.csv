@@ -2,7 +2,7 @@ key,de,en
 source,Quelle,Source
 year,Jahr,Year
 bln,Mrd,Bln
-intro,Hier kommt ein kleiner Introtext zur Erklärung,Here comes a small intro-text for explanation
+intro,"Wähle rechts Elemente aus, um auf die Gesamtsumme von %value% Mrd. € zu kommen.",Here comes a small intro-text for explanation
 end-title,Das ist zu viel!,This is too much!
 end-message,Du hast jetzt mehr als,You have now more than
 end-message-reset,Neu starten,Reset from scratch
