@@ -5,7 +5,6 @@ import resetViz from './reset_viz.js'
 
 <svg-viz class="gteviz-svgviz">
   <div if={ showIntro } class="gteviz-svgviz__intro">
-    <i class="fa fa-info-circle"></i>
     { _('intro').replace('%value%', maxValue) }
   </div>
   <div ref="wrapper" class="gteviz-svgviz__wrapper" />
