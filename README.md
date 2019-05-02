@@ -13,6 +13,11 @@ Build with [d3js](https://d3js.org) and [riot.js](https://riot.js.org)
 How to include in article: Load css & js and insert a `<div>`-element as
 described below:
 
+**FIXME: put assets somewhere else ("github is not a CDN")**
+
+https://correctiv.github.io/grand-theft-europe-viz/gte-viz.js
+
+https://correctiv.github.io/grand-theft-europe-viz/gte-viz.css
 
 ### European Data, 50 Bln., language: English
 
