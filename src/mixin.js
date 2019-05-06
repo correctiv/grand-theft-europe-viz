@@ -37,7 +37,7 @@ const mixin = {
       // bc `app.tag` is mounted first
       this.LANG = opts.dataLang
       this.SCOPE = opts.dataScope
-      this.CONTROL = riot.observable()  // per-app event-bus
+      this.CONTROL = riot.observable() // per-app event-bus
     }
     if (this.parent) {
       this.LANG = this.parent.LANG
@@ -48,6 +48,10 @@ const mixin = {
     this.STORE = STORE
     this.EVENTS = EVENTS
     this._ = key => trans(key, this.LANG || 'de')
+    this._n = val =>
+      val && this.LANG === 'de'
+        ? val.toFixed(1).replace('.', ',')
+        : val.toFixed(1)
   }
 }
 

@@ -5,7 +5,8 @@ export default (
   { width, height, margin },
   CONTROL,
   EVENTS,
-  _
+  _,
+  _n
 ) => {
   const Y = y(item.value + currentValue)
   const rect = g
@@ -24,7 +25,7 @@ export default (
   tooltip
     .transition()
     .style('top', `${Y}px`)
-    .text(`${(currentValue + item.value).toFixed(1)} ${_('bln')}. €`)
+    .text(`${_n(currentValue + item.value)} ${_('bln')}. €`)
 
   rect.on('mouseover', () => {
     CONTROL.trigger(EVENTS.hover, item)

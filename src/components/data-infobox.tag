@@ -1,6 +1,6 @@
-<data-infobox class="gteviz-infobox { gteviz-infobox--visible: visible }">
+<data-infobox class="gteviz-infobox { gteviz-infobox--visible: visible } { gteviz-infobox--visible-lg: visiblelg }">
   <span class="gteviz-infobox__close" onclick={ close }></span>
-  <h2 class="gteviz-infobox__value">{ item.value.toFixed(1) } { _('bln') }. €</h2>
+  <h2 class="gteviz-infobox__value">{ _n(item.value) } { _('bln') }. €</h2>
   <h3 class="gteviz-infobox__title">{ getTitle() }</h3>
   <p class="gteviz-infobox__text">{ getText() }</p>
   <a class="gteviz-infobox__source" href="{ item.url }" target="_blank">
@@ -15,7 +15,7 @@
   this.getTitle = () => this.item[`title_${this.LANG}`]
   this.getText = () => this.item[`text_${this.LANG}`]
 
-  this.close = () => this.update({ visible: false })
+  this.close = () => this.update({ visible: false, visiblelg: false })
 
   this.CONTROL.on(this.EVENTS.hover, item => {
     !this.blocked && this.update({ item, visible: true })
@@ -36,8 +36,8 @@
     this.update({ blocked: false })
   })
 
-  this.CONTROL.on(this.EVENTS.addItem, () => this.close())
-  this.CONTROL.on(this.EVENTS.deleteItem, () => this.close())
+  this.CONTROL.on(this.EVENTS.addItem, (item, initial=false) => !initial && this.update({ item, visiblelg: true }))
+  this.CONTROL.on(this.EVENTS.removeItem, () => this.close())
 
   // this.CONTROL.on(this.EVENTS.hoverOut, () => this.update({ visible: false }))
 </data-infobox>

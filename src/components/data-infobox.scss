@@ -1,38 +1,49 @@
 @import '../vars.scss';
 @import '../mixins.scss';
 
+@mixin visible {
+  // width: 100%;
+  // border: 2px solid $blue;
+  line-height: 24px;
+  font-size: 14px;
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 80px;
+  z-index: 100;
+  // background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
+  right: 40px;
+  // bottom: 80px;
+  left: 40px;
+  visibility: visible;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.11);
+  padding: 20px 0 20px 0;
+
+  @include bp-sm {
+    top: auto;
+    left: 110px;
+    right: 50%;
+    bottom: 30px;
+    margin-right: 10px;
+  }
+
+}
+
 .gteviz-infobox {
   display: none;
-  visibility: hidden;
-  z-index: -99;
+  // visibility: hidden;
+  // z-index: -99;
 
   &--visible {
-    // width: 100%;
-    // border: 2px solid $blue;
-    line-height: 24px;
-    font-size: 14px;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-    text-align: center;
-    display: block;
-    position: absolute;
-    top: 80px;
-    z-index: 100;
-    // background-color: rgba(255, 255, 255, 0.9);
-    background-color: white;
-    right: 40px;
-    // bottom: 80px;
-    left: 40px;
-    visibility: visible;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.11);
-    padding: 20px 0 20px 0;
+    @include visible;
+  }
 
+  &--visible-lg {
     @include bp-sm {
-      top: auto;
-      left: 110px;
-      right: 50%;
-      bottom: 30px;
-      margin-right: 10px;
+      @include visible;
     }
   }
 
