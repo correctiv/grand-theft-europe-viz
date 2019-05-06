@@ -95,7 +95,8 @@
       background-color: #ff5064; }
   .gteviz-dataitem__close {
     position: absolute;
-    right: 10px; }
+    right: 10px;
+    color: white; }
     .gteviz-dataitem__close:after {
       content: '\2716'; }
 
