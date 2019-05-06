@@ -28,7 +28,8 @@
   font-size: 12px;
   line-height: 1;
   // color: $red;
-  color: $grey-dark;
+  // color: $grey-dark;
+  color: black;
   @include transition(background-color);
 
   &:hover {

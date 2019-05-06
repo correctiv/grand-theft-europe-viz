@@ -37,10 +37,11 @@
   }
 
   &__close {
+    font-size: 26px;
     cursor: pointer;
     display: block;
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 10px;
     // color: white;
     color: $blue;
@@ -77,7 +78,8 @@
   &__text,
   &__source {
     line-height: 20px !important;
-    padding: 10px;
+    padding: 10px !important;
+    margin: 0 !important;
   }
 
   // &:after {
