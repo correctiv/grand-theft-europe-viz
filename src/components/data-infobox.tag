@@ -5,7 +5,7 @@
   <p class="gteviz-infobox__text">{ getText() }</p>
   <a class="gteviz-infobox__source" href="{ item.url }" target="_blank">
     <i class="fa fa-angle-right" aria-hidden="true"></i>
-    { _('source') }: { item.source } ({ _('year') }: { item.year })
+    { _('source') }: { getSource() }
   </a>
 
   this.item = { value: 0 }
@@ -14,6 +14,7 @@
 
   this.getTitle = () => this.item[`title_${this.LANG}`]
   this.getText = () => this.item[`text_${this.LANG}`]
+  this.getSource = () => this.item[`source_${this.LANG}`]
 
   this.close = () => this.update({ visible: false, visiblelg: false })
 

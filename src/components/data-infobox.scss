@@ -35,7 +35,7 @@
 .gteviz-infobox {
   display: none;
   // visibility: hidden;
-  // z-index: -99;
+  z-index: -99;
 
   &--visible {
     @include visible;
@@ -62,7 +62,8 @@
     }
 
     @include bp-sm {
-      display: none;
+      // display: none;
+      font-size: 14px;
     }
   }
 

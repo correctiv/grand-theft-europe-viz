@@ -100,7 +100,8 @@
       content: '\2716'; }
 
 .gteviz-infobox {
-  display: none; }
+  display: none;
+  z-index: -99; }
   .gteviz-infobox--visible {
     line-height: 24px;
     font-size: 14px;
@@ -160,7 +161,7 @@
       content: '\2716'; }
     @media (min-width: 768px) {
       .gteviz-infobox__close {
-        display: none; } }
+        font-size: 14px; } }
   .gteviz-infobox__value {
     font-size: 30px !important;
     padding: 10px;

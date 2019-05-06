@@ -8,3 +8,4 @@ end-message-sum,Sie haben schon,You already selected
 end-message-item,Zusammen mit %item% (%value%) sind das mehr als,Together with %item% (%value%) this is more than
 end-message-reset,Neu starten,Start again
 end-message-reselect,Etwas anderes auswählen,Select something different
+end-message-empty,%item% (%value%) sind mehr als,
