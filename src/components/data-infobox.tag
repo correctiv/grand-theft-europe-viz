@@ -19,7 +19,7 @@
   this.close = () => this.update({ visible: false, visiblelg: false })
 
   this.CONTROL.on(this.EVENTS.hover, item => {
-    !this.blocked && this.update({ item, visible: true })
+    setTimeout(() => !this.blocked && this.update({ item, visible: true }), 1)
   })
 
   this.CONTROL.on(this.EVENTS.reachedTarget, () => {

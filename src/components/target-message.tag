@@ -15,8 +15,8 @@
   this.getMessage = () => {
     const msg = (this.value - this.item.value) ? this._('end-message-item') : this._('end-message-empty')
     return msg
-    .replace('%item%', this.item[`title_${this.LANG}`])
-    .replace('%value%', this._n(this.item.value)) + ` ${this._n(this.maxValue)}`
+      .replace('%item%', this.item[`title_${this.LANG}`])
+      .replace('%value%', this._n(this.item.value)) + ` ${this._n(this.maxValue)}`
   }
 
   this.getTitle = () => this.item[`title_${this.LANG}`]
