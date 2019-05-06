@@ -5,7 +5,6 @@ export default (
   { width, height, margin },
   CONTROL,
   EVENTS,
-  _,
   _n
 ) => {
   const Y = y(item.value + currentValue)

@@ -36,7 +36,10 @@
     this.update({ blocked: false })
   })
 
-  this.CONTROL.on(this.EVENTS.addItem, (item, initial=false) => !initial && this.update({ item, visiblelg: true }))
+  this.CONTROL.on(this.EVENTS.addItem, (item, initial=false) => {
+    !initial && this.update({ item, visible: false, visiblelg: true })
+  })
+
   this.CONTROL.on(this.EVENTS.removeItem, () => this.close())
 
   // this.CONTROL.on(this.EVENTS.hoverOut, () => this.update({ visible: false }))

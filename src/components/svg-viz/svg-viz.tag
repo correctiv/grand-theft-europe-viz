@@ -25,7 +25,7 @@ import resetViz from './reset_viz.js'
   })
 
   this.CONTROL.on(this.EVENTS.removeItem, item => {
-    this.items = deleteItem(this.viz, this.items, item, this.currentValue, this._, this._n)
+    this.items = deleteItem(this.viz, this.items, item, this.currentValue, this._n)
     this.currentValue -= item.value
   })
 
@@ -43,7 +43,7 @@ import resetViz from './reset_viz.js'
   }
 
   this._handleAddItem = item => {
-    const rect = addItem(this.viz, item, this.currentValue, this.STORE, this.CONTROL, this.EVENTS, this._, this._n)
+    const rect = addItem(this.viz, item, this.currentValue, this.STORE, this.CONTROL, this.EVENTS, this._n)
     this.currentValue += item.value
     this.items.push({ item, rect })
   }
