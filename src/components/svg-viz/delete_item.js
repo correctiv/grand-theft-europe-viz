@@ -1,4 +1,4 @@
-export default ({ tooltip, y }, items, item, currentValue, _, _n) => {
+export default ({ tooltip, y }, items, item, currentValue, _n) => {
   const { rect } = items.find(i => i.item === item)
   const itemHeight = Number(rect.attr('height'))
   const itemY = Number(rect.attr('y'))
@@ -10,7 +10,7 @@ export default ({ tooltip, y }, items, item, currentValue, _, _n) => {
     tooltip
       .transition()
       .style('top', `${y(newValue)}px`)
-      .text(`${_n(newValue)} ${_('bln')}. €`)
+      .text(_n(newValue))
       .on('end', () => Math.round(newValue) <= 0 && tooltip.text(''))
     remainingItems.map(({ rect }) => {
       const oldY = Number(rect.attr('y'))

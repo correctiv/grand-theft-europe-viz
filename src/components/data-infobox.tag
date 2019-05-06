@@ -1,6 +1,6 @@
 <data-infobox class="gteviz-infobox { gteviz-infobox--visible: visible } { gteviz-infobox--visible-lg: visiblelg }">
   <span class="gteviz-infobox__close" onclick={ close }></span>
-  <h2 class="gteviz-infobox__value">{ _n(item.value) } { _('bln') }. €</h2>
+  <h2 class="gteviz-infobox__value">{ _n(item.value) }</h2>
   <h3 class="gteviz-infobox__title">{ getTitle() }</h3>
   <p class="gteviz-infobox__text">{ getText() }</p>
   <a class="gteviz-infobox__source" href="{ item.url }" target="_blank">

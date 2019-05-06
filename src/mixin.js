@@ -49,9 +49,9 @@ const mixin = {
     this.EVENTS = EVENTS
     this._ = key => trans(key, this.LANG || 'de')
     this._n = val =>
-      val && this.LANG === 'de'
+      val && `€${this.LANG === 'de'
         ? val.toFixed(1).replace('.', ',')
-        : val.toFixed(1)
+        : val.toFixed(1)} ${this._('bln')}.`
   }
 }
 

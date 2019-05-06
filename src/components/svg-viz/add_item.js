@@ -25,7 +25,7 @@ export default (
   tooltip
     .transition()
     .style('top', `${Y}px`)
-    .text(`${_n(currentValue + item.value)} ${_('bln')}. €`)
+    .text(_n(currentValue + item.value))
 
   rect.on('mouseover', () => {
     CONTROL.trigger(EVENTS.hover, item)
