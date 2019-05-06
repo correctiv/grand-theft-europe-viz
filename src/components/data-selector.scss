@@ -26,6 +26,11 @@
   border-radius: 10px;
   padding: 5px 7px;
   font-size: 12px;
+
+  @include bp-sm {
+    font-size: 14px;
+  }
+
   line-height: 1;
   // color: $red;
   // color: $grey-dark;

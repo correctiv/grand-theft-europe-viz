@@ -51,7 +51,8 @@
     @media (min-width: 768px) {
       .gteviz-svgviz__intro {
         left: 40px;
-        right: 40px; } }
+        right: 40px;
+        font-size: 14px; } }
     .gteviz-svgviz__intro .fa {
       display: block; }
 
@@ -81,6 +82,9 @@
   -moz-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   -webkit-transition: background-color 0.5s; }
+  @media (min-width: 768px) {
+    .gteviz-dataitem {
+      font-size: 14px; } }
   .gteviz-dataitem:hover {
     -moz-transition: background-color 0.5s;
     -o-transition: background-color 0.5s;
@@ -233,6 +237,9 @@
     -moz-transition: background-color 0.5s;
     -o-transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s; }
+    @media (min-width: 768px) {
+      .gteviz-targetmessage .button {
+        font-size: 14px; } }
     .gteviz-targetmessage .button:hover {
       background-color: #ff8391; }
     .gteviz-targetmessage .button--light {
