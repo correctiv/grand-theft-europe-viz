@@ -77,7 +77,7 @@
   padding: 5px 7px;
   font-size: 12px;
   line-height: 1;
-  color: #7a7a7a;
+  color: black;
   -moz-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   -webkit-transition: background-color 0.5s; }
@@ -100,9 +100,7 @@
       content: '\2716'; }
 
 .gteviz-infobox {
-  display: none;
-  visibility: hidden;
-  z-index: -99; }
+  display: none; }
   .gteviz-infobox--visible {
     line-height: 24px;
     font-size: 14px;
@@ -126,11 +124,36 @@
         right: 50%;
         bottom: 30px;
         margin-right: 10px; } }
+  @media (min-width: 768px) {
+    .gteviz-infobox--visible-lg {
+      line-height: 24px;
+      font-size: 14px;
+      border: 1px solid #f5f5f5;
+      border-radius: 10px;
+      text-align: center;
+      display: block;
+      position: absolute;
+      top: 80px;
+      z-index: 100;
+      background-color: white;
+      right: 40px;
+      left: 40px;
+      visibility: visible;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.11);
+      padding: 20px 0 20px 0; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    .gteviz-infobox--visible-lg {
+      top: auto;
+      left: 110px;
+      right: 50%;
+      bottom: 30px;
+      margin-right: 10px; } }
   .gteviz-infobox__close {
+    font-size: 26px;
     cursor: pointer;
     display: block;
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 10px;
     color: #1e4664; }
     .gteviz-infobox__close:before {
@@ -153,7 +176,8 @@
     line-height: 20px !important; }
   .gteviz-infobox__text, .gteviz-infobox__source {
     line-height: 20px !important;
-    padding: 10px; }
+    padding: 10px !important;
+    margin: 0 !important; }
 
 .gteviz-targetmessage {
   display: none;
